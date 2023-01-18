@@ -3,10 +3,7 @@
 // REQS: use .reduce
 
 export const getSneaks = (brands) => {
-  return brands.reduce((acc, curval) => {
-    acc.push(...curval.shoes);
-    return acc;
-  }, []);
+  return brands.reduce((acc, curval) => [...acc, ...curval.shoes], []);
 };
 
 // INPUT: the array of dogs from data.js
